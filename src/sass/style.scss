@@ -1,16 +1,16 @@
 $theme-colors: (
-    "primary": #ff3a52,
-    "dark": #000000
+    "primary": #C1F7D5,
+    "dark": #354463
 );
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
-body {
-    padding-top:56px;
-}
-.footer {
-    margin-top:3rem;
-}
-.navbar {
-    border-bottom:1px solid #eee;
-}
+
+
+@import "index";
+@import "about";
+@import "news";
+@import "stories";
+@import "donation";
+@import "donation2";
+@import "donation3";
