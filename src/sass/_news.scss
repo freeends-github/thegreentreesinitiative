@@ -68,3 +68,114 @@ section#latest-post{
     }
   }
 }
+section#all-entries{
+  padding: 67.7px 0 122px;
+  .all-entries_header{
+    // display: flex;
+    // justify-content: space-between;
+    h2{
+      float: left;
+      text-transform: uppercase;
+      font-size: 44px;
+      font-weight: 400;
+    }
+    #all-entries_filter{
+      background-color: #354463;
+      padding: 8px;
+      border-radius: 100px;
+      float: right;
+      button{
+        color: #C1F7D5;
+        text-decoration: underline;
+        padding: 2px 38px;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: capitalize;
+        background: none;
+        border: none;
+        border-radius: 100px;
+      }
+    }
+  }
+    .all-entries_contents{
+      margin-top: 62px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 32px;
+      .card{
+        border-radius: 0;
+        background-color: #354463;
+        color: #fff;
+        .card-body{
+          position: relative;
+        }
+        h2{
+          font-size: 22px;
+          font-weight: 700;
+        
+        }
+        img{
+          border-radius: 0;
+        }
+        a{
+          color: #fff;
+          text-decoration: underline;
+          font-weight: 300;
+          margin: 30px 0;
+        }
+        .section-badge{
+          position: absolute;
+          top: 0;
+          transform: translateY(-50%);
+          display: inline-block;
+          background-color: #fff;
+          p{
+            color: #354463;
+          }
+        }
+      }
+      .card-1{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        .card-text{
+          font-size: 36px;
+        }
+        .section-badge{
+          top: auto;
+          bottom: 0;
+          transform: translateY(50%);
+        }
+      }
+      .card-2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        .card-text{
+          font-size: 36px;
+        }
+        .section-badge{
+          top: auto;
+          bottom: 0;
+          transform: translateY(50%);
+        }
+      }
+      .card-3{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+          .card-text{
+            font-size: 36px;
+            margin-bottom: 9px;
+          }
+          .section-badge{
+            top: auto;
+            bottom: 0;
+            transform: translateY(50%);
+          }
+      }
+    }
+}

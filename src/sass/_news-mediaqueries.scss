@@ -38,6 +38,54 @@
       }
     }
   }
+  section#all-entries{
+    padding: 46px 0 64px;
+      .all-entries_contents{
+        margin-top: 57px;
+        grid-template-columns: repeat(3, 1fr);
+        .card{
+          h2{
+            font-size: 16px;
+          }
+          a{
+            font-size: 14px;
+            // margin: 30px 0;
+          }
+          .section-badge{
+            padding-left: 16px;
+            padding-right: 60px;
+          }
+        }
+        .card-1{
+          grid-column-start: 2;
+          grid-column-end: 4;
+          grid-row-start: 2;
+          grid-row-end: 3;
+          .card-text{
+            font-size: 22px;
+          }
+        }
+        .card-2{
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 3;
+          grid-row-end: 4;
+          .card-text{
+            font-size: 22px;
+          }
+        }
+        .card-3{
+          grid-column-start: 2;
+          grid-column-end: 4;
+          grid-row-start: 4;
+          grid-row-end: 5;
+            .card-text{
+              font-size: 22px;
+              // margin-bottom: 9px;
+            }
+        }
+      }
+  }
 }
 @media only screen and (max-width: 767px){
   section#latest-post{
@@ -105,5 +153,65 @@
       }
     }
   }
+  section#all-entries{
+    padding: 67.7px 0 122px;
+    .all-entries_header{
+      // display: flex;
+      // justify-content: space-between;
+      h2{
+        float: none;
+        margin-bottom: 27px;
+      }
+      #all-entries_filter{
+        float: none;
+        display: inline-block;
+        margin-bottom: 32px;
+      }
+    }
+  }
 }
-@media only screen and (max-width: 600px){}
+@media only screen and (max-width: 600px){
+
+  section#all-entries{
+    padding: 50px 0 64px;
+    .all-entries_header{
+      h2{
+        font-size: 32px;
+      }
+    }
+      .all-entries_contents{
+        margin-top: 32px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 16px;
+        .card{
+          h2{
+            font-size: 16px;          
+          }
+          a{
+            font-size: 14px;
+            margin: 30px 0;
+          }
+        }
+        .card-1{
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 3;
+        }
+        .card-2{
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 3;
+          grid-row-end: 4;
+        }
+        .card-3{
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 5;
+          grid-row-end: 6;
+        }
+      }
+  }
+  
+}

@@ -54,6 +54,32 @@
       }
     }
   }
+  section#our-impact{
+    color: #fff;
+    .our-impact_bg{
+      padding: 64px 0;
+      .our-impact_header{
+        h2{
+          font-size: 36px;
+        }
+      }
+      .section-badge{
+        margin-bottom: 23px;
+      }
+  
+      .counter_grid-container{
+        margin-top: 66px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 57px;
+        grid-column-gap: 64px;
+        &>div{
+          h4{
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
 }
 @media only screen and (max-width: 767px){}
 @media only screen and (max-width: 600px){
@@ -119,6 +145,37 @@
       .card-body{
         padding: 14px 10px 14px 16px;
         transform: none;
+      }
+    }
+  }
+  section#our-impact{
+    color: #fff;
+    .our-impact_bg{
+      padding: 32px 0 50px;
+      .our-impact_header{
+        h2{
+          font-size: 22px;
+        }
+      }
+      .section-badge{
+        background-color: #fff;
+        display: inline-block;
+        margin-bottom: 26px;
+        p{
+          color: #354463;
+        }
+      }
+  
+      .counter_grid-container{
+        margin-top: 29px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 20px;
+        &>div{
+          .counter{ font-size: 44px;}
+          h4{
+            font-size: 16px;
+          }
+        }
       }
     }
   }
