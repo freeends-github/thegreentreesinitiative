@@ -1,11 +1,153 @@
 $theme-colors: (
-    "primary": #C1F7D5,
-    "dark": #354463
+    "primary": #354463,
+    "dark": #C1F7D5
 );
-
 @import "node_modules/bootstrap/scss/bootstrap";
-
-
+body{
+    overflow-x: hidden;
+}
+li{list-style: none;}
+button{
+    background-color: #C1F7D5;
+}
+.section-badge{
+    text-align: center;
+    margin: 0;
+    padding: 11px 40px;
+    background-color: #354463;
+    p{
+      font-size: 14px;
+      margin: 0;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+#logo{
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0;
+}
+header{
+    background-color: #fff;
+    .header_flex-container{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        #logo_navigation{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            nav{
+                width: 60%;
+                ul{
+                    width: 100%;
+                    margin: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    li{
+                        a{
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+        .donate{
+            background-color: #C1F7D5;
+            padding: 13px 18px;
+            border-radius: 100px;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+    }
+}
+footer{
+    padding: 114px 0 122px; // watch for wesponsive
+    .grid-container_footer{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+        grid-column-gap: 30px;
+        .links{
+            h4{
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 400;
+                padding-bottom: 8px;
+                border-bottom: 1px solid #354463;
+            }
+            ul{
+                font-size: 14px;
+                margin: 0;
+                padding: 0;
+                font-weight: 300;
+                li{
+                    line-height: 20px;
+                }
+                p{
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+        #stop-climate-change{
+            text-align: right;
+            h2{
+                line-height: 46px;
+                margin: 0;
+                font-size: 44px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+section#subscribe-module{
+    padding: 69px 0;
+    background-color: #C1F7D5;
+    .subscribe_flex-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .subscribe-text{
+            width: 50%;
+            h3{
+                font-size: 28px;
+                font-weight: 700;
+            }
+        }
+        .subscribe_input-btn{
+            width: 50%;
+            height: 50px;
+            padding-left: 20px;
+            display: flex;
+            justify-content: space-between;
+            input{
+                padding: 13px 24px;
+                background-color: #fff;
+                border-radius: 100px;
+                width: 60%;
+                border: none;
+                &::placeholder{
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+            }
+            button{
+                background-color: #354463;
+                color: #C1F7D5;
+                padding: 13px 32px 13px 37px;
+                border-radius: 100px;
+                border: none;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+        }
+    }
+}
 
 @import "index";
 @import "about";
@@ -14,3 +156,199 @@ $theme-colors: (
 @import "donation";
 @import "donation2";
 @import "donation3";
+
+// @media only screen and (min-width: 1700px){}
+@media only screen and (max-width: 1439px){}
+@media only screen and (max-width: 1199px){}
+@media only screen and (max-width: 991px){
+    header{
+        .header_flex-container{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            align-items: center;
+            #logo_navigation{
+                flex-direction: column;
+                align-items: flex-start;
+                width: 70%;
+                #logo{
+                    margin-bottom: 12px;
+                }
+                nav{
+                    width: 65%;
+                    ul{
+                        padding: 0;
+                    }
+                }
+            }
+            .donate{
+                padding: 13px 12px 13px 12px;
+            }
+        }
+    }
+    footer{
+        .grid-container_footer{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 30px;
+            grid-row-gap: 75px;
+            .footer_logo{
+                grid-column-start:1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+            .links{
+                h4{
+                    font-size: 11px;
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+                ul{
+                    // font-size: 14px;
+                    // margin: 0;
+                    // padding: 0;
+                    // font-weight: 300;
+                    li{
+                        a{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            #stop-climate-change{
+                text-align: left;
+            }
+        }
+    }
+    section#subscribe-module{
+        padding: 63px 0;
+        .subscribe_flex-container{
+            flex-direction: column;
+            align-items: flex-start;
+            .subscribe-text{
+                width: 100%;
+                h3{
+                    font-size: 22px;
+                    margin-bottom: 32px;
+                }
+            }
+            .subscribe_input-btn{
+                width: 100%;
+                height: 40px;
+                padding-left: 0px;
+                input{
+                    padding: 10px 24px;
+                    width: 70%;
+                    &::placeholder{
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+                button{
+                    padding: 9px 37px 9px 40px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:767px){
+    header{
+        .header_flex-container{
+            #logo_navigation{
+                nav{
+                    width: 80%;
+                }
+            }
+        }
+    }
+    section#subscribe-module{
+        .subscribe_flex-container{
+            .subscribe_input-btn{
+                input{
+                    width: 62%;
+                }
+                button{
+                    padding: 9px 28px 9px 30px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px){
+    #logo{
+        font-size: 18px;
+    }
+    header{
+        .header_flex-container{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            flex-direction: column;
+            #logo_navigation{
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 30px;
+                #logo{
+                    margin: 0;
+                }
+                nav{
+                    width: auto;
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+            .donate{
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+    }
+    footer{
+        .grid-container_footer{
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 70px;
+            .footer_logo{
+                grid-column-start:1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            #stop-climate-change{
+                grid-column-start:1;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                text-align: right;
+            }
+        }
+    }
+    section#subscribe-module{
+        .subscribe_flex-container{
+            .subscribe_input-btn{
+                input{
+                    width: 60%;
+                }
+                button{
+                    padding: 9px 22px 9px 24px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@import "index-mediaqueries";
+@import "about-mediaqueries";
+@import "news-mediaqueries";
+@import "stories-mediaqueries";
+@import "donation-mediaqueries";
+@import "donation2-mediaqueries";
+@import "donation3-mediaqueries";
+
+
+
+
+

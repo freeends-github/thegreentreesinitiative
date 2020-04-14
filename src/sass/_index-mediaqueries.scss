@@ -1,0 +1,36 @@
+@media only screen and (max-width: 1439px){}
+@media only screen and (max-width: 1199px){}
+@media only screen and (max-width: 991px){
+  section#take-action{
+    padding: 60px 0;
+    .take-action_grid-container{
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 120px;
+      grid-row-gap: 37px;
+      .take-action_item{
+        h3{
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px){}
+@media only screen and (max-width: 600px){
+  section#take-action{
+    .take-action_grid-container{
+      grid-column-gap: 24px;
+      .take-action_item{
+        h3{
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+        p{
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

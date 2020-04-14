@@ -1,1 +1,30 @@
-+_
+
+
+section#take-action{
+  background-color: #C1F7D5;
+  padding: 75px 0;
+  position: relative;
+  .section-badge{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .take-action_grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 56px;
+    .take-action_item{
+      h3{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 36px;
+      }
+      p{
+        font-weight: 300;
+        margin: 0;
+        line-height: 24px;
+      }
+    }
+  }
+}

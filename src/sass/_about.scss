@@ -1,0 +1,90 @@
+
+section#mission_values{
+  padding: 128px 0 105px;
+  background-color: #354463;
+  color: #fff;
+  .mission{
+    .section-badge{
+      display: inline-block;
+      background-color: #fff;
+      margin-bottom: 32px;
+      p{
+        color: #354463;
+      }
+    }
+    h2{
+      font-size: 44px;
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+  .values_grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 60px;
+    margin-top: 130px;
+    .value{
+      img{
+        margin-left: 5px;
+        margin-bottom: 10px;
+      }
+      h3{
+        font-size: 28px;
+        font-weight: 700;
+      }
+      p{
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+section#our-team{
+  padding: 128px 0 80px 0;
+  .our-team_header{
+    .section-badge{
+      display: inline-block;
+      margin-bottom: 32px;
+    }
+    .our-team_text{
+      display: flex;
+      justify-content: space-between;
+      h2{
+        margin: 0;
+        font-size: 44px;
+        font-weight: 700;
+      }
+      p{
+        // margin: 0;
+        width: 40%;
+        margin-left: 30px;
+        margin-right: 110px;
+        font-size: 20px;
+        font-weight: 300;
+      }
+    }
+  }
+  .team_grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 64px;
+    grid-row-gap: 48px;
+    margin-right: 32px;
+    margin-top: 90px;
+    .card{
+      border: none;
+      border-radius: 0;
+      .card-img-top{
+        border-radius: 0;
+      }
+    }
+    .card-body{
+      background-color: #354463;
+      color: #fff;
+      padding: 14px 0 14px 32px;
+      transform: translate(32px, -24px);
+      p{font-size: 16px; font-weight: 300;}
+    }
+  }
+}
