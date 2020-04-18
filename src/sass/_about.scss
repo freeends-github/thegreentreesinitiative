@@ -1,3 +1,41 @@
+section.top-banner_about{
+  padding: 66px 0 86px;
+  background-image: url(../img/annie-spratt-427339-unsplash@2x.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: 76%;
+  background-color: #354463;
+  .top-banner_about--flex-container{
+    display: flex;
+    justify-content: space-between;
+    .stop-climate-change{
+      font-size: 72px;
+      font-weight: 400;
+      margin: 0;
+      color: #fff;
+    }
+    .t-b-a{
+      width: 50%;
+    }
+    .the-issue_text{
+      position: relative;
+      padding: 64px;
+      transform: translateY(150px);
+      background-color: #fff;
+      h3{
+        font-size: 28px;
+        font-weight: 700;
+      }
+      .section-badge{
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
 
 section#mission_values{
   padding: 128px 0 105px;
@@ -125,6 +163,78 @@ section#our-impact{
         h4{
           font-size: 28px;
           font-weight: 700;
+        }
+      }
+    }
+  }
+}
+section#tbt{
+  background-color: #354463;
+  padding: 128px 0;
+  .tbt_text{
+    // display: flex;
+    // justify-content: space-between;
+    h2{
+      font-size: 72px;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: white;
+      float: left;
+    }
+    .arrow-desktop{
+      // width: 62px;
+      // height: 62px;
+      border-radius: 62px;
+      background-color: #C1F7D5;
+      float: right;
+      img{
+        margin: 20px 15px 20px 15px;
+      }
+    }
+
+  }
+  #tbt-carousel{
+    margin-top: 157px;
+    margin-left: 10%;
+    // overflow: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    .slick-prev{
+      display: none !important;
+    }
+    .slick-track{
+      display: flex;
+      padding-top: 20px;
+      .slick-slide{
+        margin-right: 32px;
+      }
+    }
+    .card{
+      display: inline-block;
+      position: relative;
+      .arrow-mobile{
+        display: none;
+      }
+      .card-body{
+        padding: 64px 48px 64px 64px;
+        .card-title{
+          font-size: 28px;
+          font-weight: 700;
+        }
+        .card-text{
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+      .section-badge{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 64px;
+        background-color: #fff;
+        transform: translateY(-50%);
+        p{
+          color: #354463;
         }
       }
     }

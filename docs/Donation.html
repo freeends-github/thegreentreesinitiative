@@ -17,26 +17,77 @@
     </head>
     
     <body>
-        <header>
+        <header class="donation_header">
             <div class="container header_flex-container">
                 <div id="logo_navigation">
                      <h1 id="logo">The green <br>trees initiative</h1>
-                    <nav>
-                        <ul>
-                            <li><a href="../about.html">About us</a>
-
-                            </li>
-                            <li><a href="../stories.html">Our stories</a>
-
-                            </li>
-                            <li><a href="../news.html">News and events</a>
-
-                            </li>
-                        </ul>
-                    </nav>
-                </div> <a href="#" class="donate">Donate today</a>
+                </div>
             </div>
         </header>
+        <main id="donation_main">
+            <div class="container donation_flex-container">
+                <div class="donation_amont">
+                    <form action="">
+                         <h3>Choose a donation amount</h3>
+                        <div class="input_radios">
+                            <div class="pay-per-humanity" id="donacion_dhjeteshe">
+                                <div class="input_radio">
+                                    <input type="radio" id="dhjeteshe" name="donacioni" value="10">
+                                    <label for="dhjeteshe">
+                                        <h2>$10</h2>
+                                    </label>
+                                </div>
+                                <p>Aliquam sed nisl porttitor nisl laoreet semper nec iaculis nibh. Vitae
+                                    vestibulum.</p>
+                            </div>
+                            <div class="pay-per-humanity" id="donacion_qerekeshe">
+                                <div class="input_radio">
+                                    <input type="radio" id="qerekeshe" name="donacioni" value="25">
+                                    <label for="qerekeshe">
+                                        <h2>$25</h2>
+                                    </label>
+                                </div>
+                                <p>Aliquam sed nisl porttitor nisl laoreet semper nec iaculis nibh. Vitae
+                                    vestibulum.</p>
+                            </div>
+                            <div class="pay-per-humanity" id="donacion_gjysmeshe">
+                                <div class="input_radio">
+                                    <input type="radio" id="gjysmeshe" name="donacioni" value="50">
+                                    <label for="gjysmeshe">
+                                        <h2>$50</h2>
+                                    </label>
+                                </div>
+                                <p>Aliquam sed nisl porttitor nisl laoreet semper nec iaculis nibh. Vitae
+                                    vestibulum.</p>
+                            </div>
+                        </div>
+                        <button class="underline">Enter a custom donation amount</button>
+                         <h3>Choose a donation frequency</h3>
+                        <div class="donation-frequency_inputs">
+                            <div class="frequency_input">
+                                <input type="radio" name="frequency" id="monthly_donation">
+                                <label for="monthly_donation">
+                                    <h4>Monthly</h4>
+                                </label>
+                            </div>
+                            <div class="frequency_input">
+                                <input type="radio" name="frequency" id="one-time_donation">
+                                <label for="one-time_donation">
+                                    <h4>One time</h4>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="cancel_checkout">
+                            <button class="underline">Cancel</button>
+                            <button id="go-to-checkout" class="regular-btn">Go to checkout</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="we-can">
+                    <h2>We can Save the future</h2>
+                </div>
+            </div>
+        </main>
         <footer>
             <div class="container grid-container_footer">
                 <div class="footer_logo">
@@ -106,6 +157,81 @@
         <script src="js/all.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            
+                //tbt carousel (about)
+                $('#tbt-carousel').slick({
+                    dots: false,
+                    nextArrow: $('.arrow-desktop'),
+                    infinite: true,
+                    speed: 1000,
+                    slidesToShow: 2,
+                    variableWidth: true
+                });
+            
+            
+            
+            
+            //     $('.story-header').on('init', function(event, slick){
+            //     var $items = slick.$dots.find('li');
+            //     $items.addClass('list-dot');
+            //     $items.find('button').remove();
+            // });
+            
+                //Slick sliders (our stories)
+                $('.story-header').slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  asNavFor: '.img-of, .person-photo, .person-quotes',
+                  dots: true,
+                  appendDots: $('#slick--dots'),
+                  nextArrow: $('.story .regular-btn'),
+                  infinity: true,
+                  touchMove: false,
+                  accessibility: false,
+                  draggable: false,
+            
+                });
+                $('.img-of').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    fade: true,
+                    infinity: true,
+                    touchMove: false,
+                    accessibility: false,
+                    draggable: false,
+                    asNavFor: '.story-header'
+                });
+                $('.person-photo').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    touchMove: false,
+                    infinity: true,
+                    accessibility: false,
+                    draggable: false,
+                    fade: true,
+                    asNavFor: '.story-header'
+                });
+                $('.person-quotes').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    infinity: true,
+                    fade: true,
+                    touchMove: false,
+                    centerPadding: '0px',
+                    accessibility: false,
+                    draggable: false,
+                    asNavFor: '.story-header'
+                });
+            });
+        </script>
     </body>
 
 </html>

@@ -19,8 +19,7 @@
     <body>
         <header>
             <div class="container header_flex-container">
-                <div id="logo_navigation">
-                     <h1 id="logo">The green <br>trees initiative</h1>
+                <div id="logo_navigation"> <a href="../index.html" id="logo">The green <br>trees initiative</a>
                     <nav>
                         <ul>
                             <li><a href="../about.html">About us</a>
@@ -34,9 +33,57 @@
                             </li>
                         </ul>
                     </nav>
-                </div> <a href="#" class="donate">Donate today</a>
+                </div> <a href="../donation.html" class="donate">Donate today</a>
             </div>
         </header>
+        <section id="thank-you">
+            <div class="container don3_flex-container">
+                <div class="thank-you_text">
+                     <h2>
+
+        Thank you. Your donation helps support families in 
+
+      </h2>
+                </div>
+                <div class="thank-you_share">
+                    <div class="section-badge">
+                        <p>share</p>
+                    </div>
+                     <h2>"I just donated to 
+
+          The Green Trees 
+
+          Initiative to help 
+
+          support families 
+
+          and fight climate 
+
+          change. Join me?” 
+
+      </h2>
+                    <ul>
+                        <li><a href=""><img src="./img/iconmonstr-twitter-1@2x.png" alt="">Twitter</a>
+                        </li>
+                        <li><a href=""><img src="./img/iconmonstr-facebook-1@2x.png" alt="">Facebook</a>
+                        </li>
+                        <li><a href=""><img src="./img/Path 85@2x.png" alt="">Email</a>
+                        </li>
+                        <li><a href=""><img src="./img/Path 87@2x.png" alt="">Text</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="thanks-for-giving">
+            <div class="container flex-container_thanks">
+                <p>Thank you so much for giving. We’ve sent a receipt for your donation to
+                    <a
+                    href="">yourmail@emailaddress.com</a>. If you have any questions, please don’t
+                        hesitate to reach out to</p>
+                 <h2>We can Take action now to save the future</h2>
+            </div>
+        </section>
         <footer>
             <div class="container grid-container_footer">
                 <div class="footer_logo">
@@ -106,6 +153,81 @@
         <script src="js/all.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            
+                //tbt carousel (about)
+                $('#tbt-carousel').slick({
+                    dots: false,
+                    nextArrow: $('.arrow-desktop'),
+                    infinite: true,
+                    speed: 1000,
+                    slidesToShow: 2,
+                    variableWidth: true
+                });
+            
+            
+            
+            
+            //     $('.story-header').on('init', function(event, slick){
+            //     var $items = slick.$dots.find('li');
+            //     $items.addClass('list-dot');
+            //     $items.find('button').remove();
+            // });
+            
+                //Slick sliders (our stories)
+                $('.story-header').slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  asNavFor: '.img-of, .person-photo, .person-quotes',
+                  dots: true,
+                  appendDots: $('#slick--dots'),
+                  nextArrow: $('.story .regular-btn'),
+                  infinity: true,
+                  touchMove: false,
+                  accessibility: false,
+                  draggable: false,
+            
+                });
+                $('.img-of').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    fade: true,
+                    infinity: true,
+                    touchMove: false,
+                    accessibility: false,
+                    draggable: false,
+                    asNavFor: '.story-header'
+                });
+                $('.person-photo').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    touchMove: false,
+                    infinity: true,
+                    accessibility: false,
+                    draggable: false,
+                    fade: true,
+                    asNavFor: '.story-header'
+                });
+                $('.person-quotes').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    infinity: true,
+                    fade: true,
+                    touchMove: false,
+                    centerPadding: '0px',
+                    accessibility: false,
+                    draggable: false,
+                    asNavFor: '.story-header'
+                });
+            });
+        </script>
     </body>
 
 </html>

@@ -22,55 +22,91 @@ counters.forEach(counter => {
 })
 
 
+// donation form
+
+// const humanity = document.querySelectorAll('.pay-per-humanity');
+// const inputRadio = document.querySelectorAll('.input_radio input');
+
+// inputRadio.forEach(input => {
+//   if (input.length > 0) {
+//     input.parentElement.parentElement.style.backgroundColor = '#354463';
+//   }
+// })
 
 
 
 
-//Filter (news)
-(function($) {
+//Filter (news) njomeza
+// (function($) {
 
-  'use strict';
+//   'use strict';
 
-  var $filters = $('.filteri [data-filter]'),
-    $boxes = $('.content [data-category]');
+//   var $filters = $('#all-entries_filter [data-filter]'),
+//     $boxes = $('.card [data-category]');
   
 
-  $filters.on('click', function(e) {
-    e.preventDefault();
-    var $this = $(this);
+//   $filters.on('click', function(e) {
+//     e.preventDefault();
+//     var $this = $(this);
     
-    $filters.removeClass('active');
-    $this.addClass('active');
+//     $filters.removeClass('active');
+//     $this.addClass('active');
 
-    var $filterColor = $this.attr('data-filter');
+//     var $filterColor = $this.attr('data-filter');
 
-    if ($filterColor == 'all') {
-      $boxes.removeClass('is-animated')
-        .fadeOut().finish().promise().done(function() {
-          $boxes.each(function(i) {
-            $(this).addClass('is-animated').delay((i++) * 200).fadeIn();
-          });
-        });
-    } else {
-      $boxes.removeClass('is-animated')
-        .fadeOut().finish().promise().done(function() {
-          $boxes.filter('[data-category *= "' + $filterColor + '"]').each(function(i) {
-            $(this).addClass('is-animated').delay((i++) * 200).fadeIn();
-          });
-        });
-    }
-  });
+//     if ($filterColor == 'all') {
+//       $boxes.removeClass('is-animated')
+//         .fadeOut().finish().promise().done(function() {
+//           $boxes.each(function(i) {
+//             $(this).addClass('is-animated').delay((i++) * 200).fadeIn();
+//           });
+//         });
+//     } else {
+//       $boxes.removeClass('is-animated')
+//         .fadeOut().finish().promise().done(function() {
+//           $boxes.filter('[data-category *= "' + $filterColor + '"]').each(function(i) {
+//             $(this).addClass('is-animated').delay((i++) * 200).fadeIn();
+//           });
+//         });
+//     }
+//   });
 
-})(jQuery);
+// })(jQuery);
 
 
 
-$(document).ready(function(){
-  $("#hide").click(function(){
-    $(".viewall").hide();
-  });
-  $("#show").click(function(){
-    $(".viewall").show();
-  });
+// $(document).ready(function(){
+//   $("#hide").click(function(){
+//     $(".viewall").hide();
+//   });
+//   $("#show").click(function(){
+//     $(".viewall").show();
+//   });
 
-});
+// });
+
+//==============================
+
+//filter news
+
+// (function(){
+//   'use strict';
+
+//   var $contents = $('.all-entries_contents');
+//   $contents.isotope({
+//     itemSelector: '.item',
+//     layoutMode: 'fitRows'
+//   });
+
+//   $('#all-entries_filter > button').on('click', function(e){
+//     e.preventDefault();
+
+//     var filter = $(this).attr('data-filter');
+
+//     $('#all-entries_filter > button').removeClass('active');
+//     $(this).addClass('active');
+
+//     $contents.isotope({filter: filter});
+//   })
+
+// })(jQuery);

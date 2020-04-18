@@ -1,6 +1,34 @@
 @media only screen and (max-width: 1439px){}
 @media only screen and (max-width: 1199px){}
 @media only screen and (max-width: 991px){
+  section.top-banner_home{
+    padding: 51px 0 80px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .top-banner_home--flex-container{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column-reverse;
+      .top-banner-item{
+        width: 100%;
+        h2{
+          font-size: 44px;
+        }
+      }
+      .the-issue_text{
+        padding: 59px 64px;
+        margin-top: 98px;
+        h3{
+          font-size: 36px;
+        }
+        a{
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
   section#take-action{
     padding: 60px 0;
     .take-action_grid-container{
@@ -14,7 +42,101 @@
       }
     }
   }
-
+  section#what-we-do{
+    padding: 60px 0 55px;
+    .what-we-do_text{
+      h2{
+        font-size:36px;
+        margin-bottom: 88px;
+      }
+    }
+    .what-we-do_cards{
+      padding-right: 0px;
+      flex-direction: column;
+      .what-we-do_card{
+        padding: 0 32px 50px 32px;
+        margin-bottom: 64px;
+        width: 100%;
+        .button-div{
+          text-align: right;
+          padding-right: 32px;
+          float: left;
+          width: 50%;
+        }
+        .what-we-do_card_text{
+          padding: 32px 30px 0 32px;
+          width: 50%;
+          float: right;
+          text-align: left;
+          h3{
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 28px;
+            margin-bottom: 26px;
+          }
+          p{
+            margin-bottom: 0px;
+          }
+        }
+        img{
+          width: calc( 50% - 32px);
+          float: left;
+          transform: translate(0px, -32px);
+        }
+        .regular-btn{
+          color: #354463;
+          background-color: #C1F7D5;
+          padding: 9px 32px 9px 32px;
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+  section#fact-modules{
+    padding: 65px 0;
+    .fact-modules_flex-container{
+      .fact-text{
+        h2{
+          font-size: 44px;
+          margin-bottom: 30px;
+          width: 70%;
+        }
+        .regular-btn{
+          padding: 9px 16px 9px 16px;
+        }
+  
+      }
+      .modules{
+        .fact-module{
+          padding: 18px 32px 32px 32px;
+          h2{
+            font-size: 36px;
+          }
+          p{
+            font-size: 16px;
+          }
+          ul{
+            margin-top: 14px;
+            li{
+              margin-bottom: 26px;
+            }
+          }
+        }
+        #didjuno{
+          position: relative;
+          .section-badge{
+            p{
+              font-size: 14px;
+            }
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
   section#save_future{
     padding: 48px 0 72px 0;
     .section_header{
@@ -48,8 +170,83 @@
     }
   }
 }
-@media only screen and (max-width: 767px){}
+@media only screen and (max-width: 767px){
+  section#what-we-do{
+    padding: 43px 0 32px;
+    text-align: center;
+    .what-we-do_text{
+      h2{
+        font-size:22px;
+        margin-bottom: 81px;
+      }
+    }
+    .what-we-do_cards{
+      .what-we-do_card{
+        padding: 0 32px 32px 32px;
+        .button-div{
+          float: none;
+          width: 100%;
+          padding: 0;
+          text-align: center;
+        }
+        .what-we-do_card_text{
+          padding: 0;
+          text-align: center;
+          float: none;
+          width:100%;
+          h3{
+            font-size: 18px;
+            line-height: 24px;
+          }
+          p{
+            font-size: 14px;
+            margin-bottom: 30px;
+          }
+        }
+        background-color: #fff;
+        width: 100%;
+        img{
+          width: 100%;
+          float: none;
+          transform: translate(0, -33px);
+        }
+        .regular-btn{
+          color: #354463;
+          background-color: #C1F7D5;
+          padding: 13px 32px 13px 32px;
+          border-radius: 100px;
+          border: none;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 24px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 600px){
+  section.top-banner_home{
+    padding: 48px 0;
+    .top-banner_home--flex-container{
+      .the-issue_text{
+        padding: 49px 20px 20px 30px;
+        text-align: center;
+        margin-top: 140px;
+        .section-badge{
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        h3{
+          font-size: 22px;
+        }
+        a{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
   section#take-action{
     .take-action_grid-container{
       grid-column-gap: 24px;
@@ -66,7 +263,49 @@
       }
     }
   }
-
+  section#fact-modules{
+    .fact-modules_flex-container{
+      flex-direction: column;
+      .fact-modules_flex-item{
+        width: 100%;
+      }
+      .modules{
+        margin-top: 80px;
+        .fact-module{
+          padding: 27px 32px 32px 24px;
+          margin-top: 16px;
+          h2{
+            font-size: 22px;
+          }
+          p{
+            font-size: 14px;
+          }
+          ul{
+            margin-top: 0px;
+            padding-left: 10px;;
+            li{
+              margin-bottom: 24px;
+              &:last-of-type{
+                margin: 0;
+              }
+            }
+          }
+        }
+        #didjuno{
+          position: relative;
+          .section-badge{
+            p{
+              font-size: 14px;
+            }
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
   section#save_future{
     background-color: #354463;
     color: #fff;

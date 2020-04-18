@@ -17,26 +17,113 @@
     </head>
     
     <body>
-        <header>
+        <header class="donation_header">
             <div class="container header_flex-container">
                 <div id="logo_navigation">
                      <h1 id="logo">The green <br>trees initiative</h1>
-                    <nav>
-                        <ul>
-                            <li><a href="../about.html">About us</a>
-
-                            </li>
-                            <li><a href="../stories.html">Our stories</a>
-
-                            </li>
-                            <li><a href="../news.html">News and events</a>
-
-                            </li>
-                        </ul>
-                    </nav>
-                </div> <a href="#" class="donate">Donate today</a>
+                </div>
             </div>
         </header>
+        <main id="donation_two">
+            <div class="container donation-two_flex-container">
+                <form action="">
+                    <div class="form_grid-container">
+                         <h3 class="info">Your information</h3>
+                        <div class="fname">
+                            <label for="fname">
+                                <p>FIRST NAME</p>
+                            </label>
+                            <br>
+                            <input type="text" id="fname" placeholder="First name">
+                        </div>
+                        <div class="lname">
+                            <label for="lname">
+                                <p>LAST NAME</p>
+                            </label>
+                            <br>
+                            <input type="text" id="lname" placeholder="Last name">
+                        </div>
+                        <div class="street">
+                            <label for="street">
+                                <p>STREET ADDRESS</p>
+                            </label>
+                            <br>
+                            <input type="text" id="street" placeholder="Street address">
+                        </div>
+                        <div class="city">
+                            <label for="city">
+                                <p>CITY</p>
+                            </label>
+                            <br>
+                            <input type="text" id="city" placeholder="City name">
+                        </div>
+                        <div class="state-zip">
+                            <div class="state">
+                                <label for="state">
+                                    <p>STATE</p>
+                                </label>
+                                <br>
+                                <!-- select state-->
+                            </div>
+                            <div class="zip">
+                                <label for="zip">
+                                    <p>ZIP CODE</p>
+                                </label>
+                                <br>
+                                <input type="number" id="zip" placeholder="Zip code">
+                            </div>
+                        </div>
+                        <div class="email">
+                            <label for="email-address">
+                                <p>EMAIL ADDRESS</p>
+                            </label>
+                            <br>
+                            <input type="email" id="email-address" placeholder="Email address">
+                        </div>
+                         <h3 class="payment">Payment information</h3>
+                        <div class="credit">
+                            <label for="credit-card">
+                                <p>CREDIT CARD NUMBER</p>
+                            </label>
+                            <br>
+                            <input type="text" id="credit-card" placeholder="Credit card number">
+                        </div>
+                        <div class="expiration">
+                            <div class="monthexp">
+                                <label for="monthexp">
+                                    <p>EXPIRATION</p>
+                                </label>
+                                <br>
+                                <input type="number" id="monthexp" placeholder="MM">
+                            </div>
+                            <div class="yearexp">
+                                <label for="yearexp">
+                                    <p></p>
+                                </label>
+                                <br>
+                                <input type="number" id="yearexp" placeholder="YYYY">
+                            </div>
+                        </div>
+                        <div class="sec">
+                            <div class="security">
+                                <label for="security-code">
+                                    <p>CODE</p>
+                                </label>
+                                <br>
+                                <input type="text" id="security-code" placeholder="CVC">
+                            </div>
+                        </div>
+                         <h3 class="clickthebtn">Click the button to confirm your donation of <span>$10</span><span>, recurring monthly</span></h3>
+                    </div>
+                    <div class="go-back_process-payment"> <a href="donation.html">Go back</a>
+                        <button type="submit" class="regular-btn">Process Payment</button>
+                    </div>
+                </form>
+                <div class="give-hope">
+                     <h2>Give HOPE to those Who meed It most</h2>
+                </div>
+            </div>
+        </main>
         <footer>
             <div class="container grid-container_footer">
                 <div class="footer_logo">
@@ -106,6 +193,81 @@
         <script src="js/all.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            
+                //tbt carousel (about)
+                $('#tbt-carousel').slick({
+                    dots: false,
+                    nextArrow: $('.arrow-desktop'),
+                    infinite: true,
+                    speed: 1000,
+                    slidesToShow: 2,
+                    variableWidth: true
+                });
+            
+            
+            
+            
+            //     $('.story-header').on('init', function(event, slick){
+            //     var $items = slick.$dots.find('li');
+            //     $items.addClass('list-dot');
+            //     $items.find('button').remove();
+            // });
+            
+                //Slick sliders (our stories)
+                $('.story-header').slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  asNavFor: '.img-of, .person-photo, .person-quotes',
+                  dots: true,
+                  appendDots: $('#slick--dots'),
+                  nextArrow: $('.story .regular-btn'),
+                  infinity: true,
+                  touchMove: false,
+                  accessibility: false,
+                  draggable: false,
+            
+                });
+                $('.img-of').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    fade: true,
+                    infinity: true,
+                    touchMove: false,
+                    accessibility: false,
+                    draggable: false,
+                    asNavFor: '.story-header'
+                });
+                $('.person-photo').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    touchMove: false,
+                    infinity: true,
+                    accessibility: false,
+                    draggable: false,
+                    fade: true,
+                    asNavFor: '.story-header'
+                });
+                $('.person-quotes').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    infinity: true,
+                    fade: true,
+                    touchMove: false,
+                    centerPadding: '0px',
+                    accessibility: false,
+                    draggable: false,
+                    asNavFor: '.story-header'
+                });
+            });
+        </script>
     </body>
 
 </html>

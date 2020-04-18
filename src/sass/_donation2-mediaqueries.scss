@@ -1,5 +1,87 @@
 @media only screen and (max-width: 1439px){}
 @media only screen and (max-width: 1199px){}
-@media only screen and (max-width: 991px){}
-@media only screen and (max-width: 767px){}
+@media only screen and (max-width: 991px){
+  main#donation_two{
+    padding: 64px 0 80px;
+    .donation-two_flex-container{
+      flex-direction: column-reverse;
+      form{
+        margin-right: 0px;
+      }
+      .give-hope{
+        width: 100%;
+        text-align: center;
+        h2{
+          text-align: center;
+          font-size: 44px;
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px){
+  main#donation_two{
+    padding: 32px 0;
+    .donation-two_flex-container{
+      form{
+        padding: 32px;
+        h3{
+          font-size: 22px;
+          color: #fff;
+          margin-bottom: -5px;
+        }
+        label{
+          p{
+            font-size: 11px;
+          } 
+        }
+        input{
+          padding: 2px 0 9px;        
+        }
+        input::placeholder{
+          font-size: 16px;
+          color: rgba($color:#fff, $alpha: 0.2);
+        }
+        .form_grid-container{
+          grid-column-gap: 16px;
+          .state-zip{
+            grid-column-gap: 16px;
+          }
+          .expiration{
+            grid-column-gap: 16px;
+          }
+          .sec{
+            grid-column-gap: 16px;
+          }
+          .payment{
+            margin-top: 22px;
+          }
+          .clickthebtn{
+            margin-top: 36px;
+          }
+        }
+        .go-back_process-payment{
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column-reverse;
+          margin-top: 25px;
+          a{
+            font-size: 14px;
+          }
+          button.regular-btn{
+              padding: 13px 16px 13px 16px;
+              width: 100%;
+              margin-bottom: 20px;
+          }
+        }
+      }
+      .give-hope{
+        h2{
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 600px){}

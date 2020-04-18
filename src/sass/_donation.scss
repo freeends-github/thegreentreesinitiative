@@ -1,0 +1,127 @@
+header.donation_header{
+  #logo_navigation{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+main#donation_main{
+  background-image: url(../img/babies@2x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: 76%;
+  background-color: #354463;
+  padding: 80px 0 126px;
+  .donation_flex-container{
+    display: flex;
+    form{
+      background-color: #354463;
+      padding: 64px 64px 64px 54px;
+      input{
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        border: 1px solid #354463;
+        background-color: #fff !important;
+      }
+      h3{
+        font-size: 28px;
+        font-weight: 700;
+        color: #fff;
+      }
+      button.underline{
+        background: none;
+        border: none;
+        color: #C1F7D5;
+        font-size: 16px;
+        font-weight: 300;
+        text-decoration: underline;
+        margin-left: 10px;
+        margin-bottom: 60px;
+      }
+      label{
+        margin: 0;
+        h2{
+          font-size: 60px;
+          font-weight: 700;
+          color: #354463;
+          margin: 0 27px 0 31px;
+        }
+        h4{
+          font-size: 22px;
+          font-weight: 700;
+          color: #354463;
+          margin: 0;
+          margin-left: 32px;
+        }
+      }
+      .input_radios{
+        margin: 23px 0 23px 10px;
+        .pay-per-humanity{
+          border: 1px solid #fff;
+          background-color: #fff;
+          margin-top: 1px;
+          &:first-of-type{
+            margin-top: 0;
+          }
+          display: flex;
+          height: 128px;
+          align-items: center;
+          padding: 0 62px 0 31px;
+          .input_radio{
+            display: flex;
+            align-items: center;
+            height: 100%;
+          }
+          p{
+            width: 224px;
+            font-size: 16px;
+            font-weight: 300;
+            color: #354463;
+            margin: 0;
+          }
+        }
+      }
+      .donation-frequency_inputs{
+        display: flex;
+        margin: 23px 0 54px 10px;
+        // border: 1px solid #fff;
+        .frequency_input{
+          width: 50%;
+          background-color: #fff;
+          display: flex;
+          height: 88px;
+          align-items: center;
+          padding: 0 32px;
+        }
+      }
+      .cancel_checkout{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .underline{
+          margin-bottom: 0;
+        }
+        .regular-btn{
+          color: #354463;
+          background-color: #C1F7D5;
+          padding: 13px 32px 13px 32px;
+          border-radius: 100px;
+          border: none;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+      }
+    }
+    .we-can{
+      h2{
+        font-size: 72px;
+        font-weight: 400;
+        color: #fff;
+      }
+      margin: 31px 0 0 96px;
+    }
+  }
+}

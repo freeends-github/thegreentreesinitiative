@@ -1,7 +1,99 @@
 @media only screen and (max-width: 1439px){}
 @media only screen and (max-width: 1199px){}
 @media only screen and (max-width: 991px){
-  
+  section#stories-of-our-work{
+    padding: 38px 0 72px;
+    .mobile-header{
+      display: block;
+      font-size: 44px;
+      font-weight: 400;
+      text-transform: lowercase;
+      margin-bottom: 32px;
+    }
+  .stories_flex-container{
+    .persons_story{
+      width: 25.6%;
+      h2{
+        display: none;
+      }
+      ul{
+        margin: 0;
+        margin-top: 5px;
+        padding: 0;
+        width: 100%;
+        li{
+          width: 100%;
+          padding: 9px 0 9px 16px;
+          margin: 6px 0;
+          a{
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .img-of{
+      margin-top: 0px;
+    }
+    .person-quotes_person-photo{
+      margin-top: 72px;
+      .person-quotes{
+        padding: 31px;
+        h2{
+          font-size: 18px;
+        }
+      }
+    }
+    .story{
+      margin-top: 64px;
+      h2{
+        font-size: 28px;
+        margin-bottom: 24px;
+      }
+      p{
+        font-size: 14px;
+      }
+      .regular-btn{
+        margin-top: 25px;
+        padding: 9px 16px 9px 16px;
+      }
+    }
+  }
+  }
 }
-@media only screen and (max-width: 767px){}
+@media only screen and (max-width: 767px){
+  section#stories-of-our-work{
+    padding: 32px 0 73px;
+    .mobile-header{
+      font-size: 32px;
+    }
+  .stories_flex-container{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    .persons_story{
+      width: 100%;
+      ul{
+        margin: 0;
+        width: 100%;
+      }
+    }
+    .img-of{
+      margin-top: 36px;
+      width: 100%;
+    }
+    .person-quotes_person-photo{
+      width: 100%;
+      margin-top: 32px;
+      .person-quotes{
+        margin-bottom: 32px;
+      }
+    }
+    .story{
+      width: 100%;
+      margin-top: 32px;
+    }
+  }
+  }
+}
 @media only screen and (max-width: 600px){}

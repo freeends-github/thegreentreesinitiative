@@ -9,6 +9,10 @@ body{
 li{list-style: none;}
 button{
     background-color: #C1F7D5;
+    outline: none;
+}
+input{
+    outline: none;
 }
 .section-badge{
     text-align: center;
@@ -21,7 +25,7 @@ button{
       color: #fff;
       text-transform: uppercase;
     }
-  }
+}
 #logo{
     font-size: 22px;
     font-weight: 700;
@@ -66,7 +70,7 @@ header{
     }
 }
 footer{
-    padding: 114px 0 122px; // watch for wesponsive
+    padding: 114px 0 122px;
     .grid-container_footer{
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
@@ -186,6 +190,7 @@ section#subscribe-module{
         }
     }
     footer{
+        padding: 62px 0 65px;
         .grid-container_footer{
             grid-template-columns: 1fr 1fr 1fr;
             grid-column-gap: 30px;

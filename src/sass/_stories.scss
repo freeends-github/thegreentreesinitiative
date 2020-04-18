@@ -1,0 +1,122 @@
+section#stories-of-our-work{
+  padding: 78px 0 128px;
+  background-color: #354463;
+  color: #fff;
+  .mobile-header{
+    display: none;
+  }
+.stories_flex-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .persons_story{
+    width: 25.6%;
+    h2{
+      font-size: 44px;
+      font-weight: 400;
+      text-transform: lowercase;
+    }
+    ul{
+      margin: 0;
+      margin-top: 64px;
+      padding: 0;
+      width: 100%;
+      li{
+        width: 100%;
+        padding: 9px 0 9px 33px;
+        margin: 6px 0;
+        a{
+          font-size: 16px;
+          text-transform: uppercase;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .img-of{
+    margin-top: 32px;
+    width: 68.5%;
+    overflow: hidden;
+    &>.dick{
+      display: inline-block;
+      width: 100%;
+      img{
+        width: 100%;
+        display: inline-block;
+      }
+    }
+    .slick-track{
+      display: flex;
+    }
+  }
+  .person-quotes_person-photo{
+    width: calc((100% - 63px) / 2);
+    margin-top: 64px;
+    .person-quotes{
+      padding: 63px;
+      background-color: #fff;
+      margin-bottom: 64px;
+      overflow: hidden;
+      .slick-track{
+        display: flex;
+      }
+      h2{
+        // margin: 63px;
+        display: inline-block;
+        color: #354463;
+        font-size: 28px;
+        font-weight: 700;
+        width: 100%;
+      }
+      .slick-slide{
+        width: 100% !important;
+      }
+    }
+    .person-photo{
+      overflow: hidden;
+      .slick-track{
+        display: flex;
+      }
+    }
+    img{
+      width: 100%;
+    }
+  }
+  .story{
+    width: calc((100% - 63px) / 2);
+    margin-top: 60px;
+    overflow: hidden;
+    .story-header{
+      &>.dick1{
+        display: inline-block;
+      }
+      .slick-prev{
+        display: none !important;
+      }
+      .slick-track{
+        display: flex;
+      }
+      h2{
+        font-size: 44px;
+        font-weight: 700;
+        margin-bottom: 33px;
+      }
+      p{
+        font-size: 20px;
+        font-weight: 300;
+      }
+    }
+    .regular-btn{
+      margin-top: 86px;
+      color: #354463;
+      background-color: #C1F7D5;
+      padding: 13px 32px 13px 32px;
+      border-radius: 100px;
+      border: none;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+  }
+}
+}

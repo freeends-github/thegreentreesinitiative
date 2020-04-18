@@ -19,8 +19,7 @@
     <body>
         <header>
             <div class="container header_flex-container">
-                <div id="logo_navigation">
-                     <h1 id="logo">The green <br>trees initiative</h1>
+                <div id="logo_navigation"> <a href="../index.html" id="logo">The green <br>trees initiative</a>
                     <nav>
                         <ul>
                             <li><a href="../about.html">About us</a>
@@ -34,7 +33,7 @@
                             </li>
                         </ul>
                     </nav>
-                </div> <a href="#" class="donate">Donate today</a>
+                </div> <a href="../donation.html" class="donate">Donate today</a>
             </div>
         </header>
         <main>
@@ -75,15 +74,14 @@
                     <div class="all-entries_header">
                          <h2>ALL ENTRIES</h2> 
                         <div id="all-entries_filter">
-                            <button class="viewall filter_link" data-filter="all" id="hide">All</button>
-                            <button class="button1 filter_link" data-filter="events" id="show">Events</button>
-                            <button class="button1 filter_link" data-filter="news"
-                            id="show">News</button>
+                            <button class="viewall active" data-filter="all" id="hide">All</button>
+                            <button class="button1" data-filter="events" id="show">Events</button>
+                            <button class="button1" data-filter="news" id="show">News</button>
                         </div>
                     </div>
                     <div style="clear: both;"></div>
                     <div class="all-entries_contents">
-                        <div class="card" data-category="buy,sell">
+                        <div class="card item" data-category="news">
                             <img src="./img/entry.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="section-badge">
@@ -92,7 +90,7 @@
                                  <h2 class="card-text">Lorem ipsum dolor sit amet, consectet adipiscing elit.</h2> <a href="#">Read this post</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card item" data-category="news">
                             <img src="./img/entry.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="section-badge">
@@ -101,7 +99,7 @@
                                  <h2 class="card-text">Lorem ipsum dolor sit amet, consectet adipiscing elit.</h2> <a href="#">Read this post</a>
                             </div>
                         </div>
-                        <div class="card card-1">
+                        <div class="card card-1 item" data-category="events">
                             <div class="card-body">
                                  <h2 class="card-text">Tree planting initiative in Green Fields Park</h2> <a href="#">Find more about this post</a> 
                                 <br>
@@ -109,9 +107,9 @@
                                     <p>2020</p>
                                 </div>
                             </div>
-                            <img src="./img/tree-planting@2x.png" class="card-img-bottom" alt="...">
+                            <img src="./img/tree-planting1@2x.png" class="card-img-bottom" alt="...">
                         </div>
-                        <div class="card card-2">
+                        <div class="card card-2 item" data-category="events">
                             <div class="card-body">
                                  <h2 class="card-text">Tree planting initiative in Green Fields Park</h2> <a href="#">Find more about this post</a> 
                                 <br>
@@ -119,9 +117,9 @@
                                     <p>2020</p>
                                 </div>
                             </div>
-                            <img src="./img/tree-planting@2x.png" class="card-img-bottom" alt="...">
+                            <img src="./img/tree-planting1@2x.png" class="card-img-bottom" alt="...">
                         </div>
-                        <div class="card">
+                        <div class="card item" data-category="news">
                             <img src="./img/entry.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="section-badge">
@@ -130,7 +128,7 @@
                                  <h2 class="card-text">Lorem ipsum dolor sit amet, consectet adipiscing elit.</h2> <a href="#">Read this post</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card item" data-category="news">
                             <img src="./img/entry.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="section-badge">
@@ -139,7 +137,7 @@
                                  <h2 class="card-text">Lorem ipsum dolor sit amet, consectet adipiscing elit.</h2> <a href="#">Read this post</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card item" data-category="news">
                             <img src="./img/entry.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="section-badge">
@@ -148,7 +146,7 @@
                                  <h2 class="card-text">Lorem ipsum dolor sit amet, consectet adipiscing elit.</h2> <a href="#">Read this post</a>
                             </div>
                         </div>
-                        <div class="card card-3">
+                        <div class="card card-3 item" data-category="events">
                             <div class="card-body">
                                  <h2 class="card-text">Tree planting initiative in Green Fields Park</h2> <a href="#">Find more about this post</a> 
                                 <br>
@@ -156,9 +154,9 @@
                                     <p>2020</p>
                                 </div>
                             </div>
-                            <img src="./img/tree-planting@2x.png" class="card-img-bottom" alt="...">
+                            <img src="./img/tree-planting1@2x.png" class="card-img-bottom" alt="...">
                         </div>
-                        <div class="card">
+                        <div class="card item" data-category="news">
                             <img src="./img/entry.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="section-badge">
@@ -251,6 +249,81 @@
         <script src="js/all.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            
+                //tbt carousel (about)
+                $('#tbt-carousel').slick({
+                    dots: false,
+                    nextArrow: $('.arrow-desktop'),
+                    infinite: true,
+                    speed: 1000,
+                    slidesToShow: 2,
+                    variableWidth: true
+                });
+            
+            
+            
+            
+            //     $('.story-header').on('init', function(event, slick){
+            //     var $items = slick.$dots.find('li');
+            //     $items.addClass('list-dot');
+            //     $items.find('button').remove();
+            // });
+            
+                //Slick sliders (our stories)
+                $('.story-header').slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  asNavFor: '.img-of, .person-photo, .person-quotes',
+                  dots: true,
+                  appendDots: $('#slick--dots'),
+                  nextArrow: $('.story .regular-btn'),
+                  infinity: true,
+                  touchMove: false,
+                  accessibility: false,
+                  draggable: false,
+            
+                });
+                $('.img-of').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    fade: true,
+                    infinity: true,
+                    touchMove: false,
+                    accessibility: false,
+                    draggable: false,
+                    asNavFor: '.story-header'
+                });
+                $('.person-photo').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    touchMove: false,
+                    infinity: true,
+                    accessibility: false,
+                    draggable: false,
+                    fade: true,
+                    asNavFor: '.story-header'
+                });
+                $('.person-quotes').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    infinity: true,
+                    fade: true,
+                    touchMove: false,
+                    centerPadding: '0px',
+                    accessibility: false,
+                    draggable: false,
+                    asNavFor: '.story-header'
+                });
+            });
+        </script>
     </body>
 
 </html>

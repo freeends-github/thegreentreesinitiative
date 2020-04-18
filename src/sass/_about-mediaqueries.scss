@@ -1,6 +1,25 @@
 @media only screen and (max-width: 1439px){}
 @media only screen and (max-width: 1199px){}
 @media only screen and (max-width: 991px){
+  section.top-banner_about{
+    padding: 46px 0 64px;
+    .top-banner_about--flex-container{
+      flex-direction: column;
+      .stop-climate-change{
+        font-size: 44px;
+      }
+      .t-b-a{
+        width: 100%;
+      }
+      .the-issue_text{
+        margin-top: 84px;
+        transform: translateY(0px);
+        h3{
+          font-size: 28px;
+        }
+      }
+    }
+  }
   section#mission_values{
     padding: 64px 0 49px;
     .mission{
@@ -83,6 +102,26 @@
 }
 @media only screen and (max-width: 767px){}
 @media only screen and (max-width: 600px){
+  section.top-banner_about{
+    padding: 32px 0px;
+    .top-banner_about--flex-container{
+      .the-issue_text{
+        padding: 32px;
+        margin-top: 140px;
+        text-align: center;
+        h3{
+          font-size: 22px;
+        }
+        .section-badge{
+          position: absolute;
+          display: inline-block;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
   section#mission_values{
     padding: 32px 0 30px;
     .mission{
