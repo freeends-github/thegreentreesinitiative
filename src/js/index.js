@@ -1,14 +1,14 @@
 //Animated counter
 
-let counters = document.querySelectorAll('.counter');
-let speed = 200;
+var counters = document.querySelectorAll('.counter');
+var speed = 200;
 
 counters.forEach(function(counter) {
-  let updateCount = function() {
-    let target = +counter.getAttribute('data-target');
-    let count = +counter.innerText;
+  var updateCount = function() {
+    var target = +counter.getAttribute('data-target');
+    var count = +counter.innerText;
 
-    let inc = target / speed;
+    var inc = target / speed;
 
     if(count < target) {
       counter.innerText =Math.ceil(count + inc);
@@ -23,11 +23,11 @@ counters.forEach(function(counter) {
 
 // Special hover
 
-let ELEMENTS = document.querySelectorAll(".special-hover");
-let ELEMENTS_SPAN = [];
+var ELEMENTS = document.querySelectorAll(".special-hover");
+var ELEMENTS_SPAN = [];
 
 ELEMENTS.forEach(function(element,index) {
-	let addAnimation = false;
+	var addAnimation = false;
 
 	if (!ELEMENTS_SPAN[index])
 		ELEMENTS_SPAN[index] = element.querySelector("span");
@@ -47,8 +47,8 @@ ELEMENTS.forEach(function(element,index) {
 
 // donation form
 
-// let humanity = document.querySelectorAll('.pay-per-humanity');
-// let inputRadio = document.querySelectorAll('.input_radio input');
+// var humanity = document.querySelectorAll('.pay-per-humanity');
+// var inputRadio = document.querySelectorAll('.input_radio input');
 
 // inputRadio.forEach(input => {
 //   if (input.length > 0) {
