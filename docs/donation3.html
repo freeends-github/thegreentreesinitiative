@@ -8,12 +8,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="./img/icon.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
         <title>GREEN</title>
-        <!-- <style>
-
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
-    </style> -->
+        <style>
+            /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap'); */
+        </style>
     </head>
     
     <body>
@@ -33,57 +32,65 @@
                             </li>
                         </ul>
                     </nav>
-                </div> <a href="../donation.html" class="donate">Donate today</a>
+                </div> <a href="../donation.html" class="donate special-hover">
+
+          <span></span>
+
+          <text>Donate today</text>
+
+        </a>
             </div>
         </header>
-        <section id="thank-you">
-            <div class="container don3_flex-container">
-                <div class="thank-you_text">
-                     <h2>
+        <main class="animated fadeIn fast">
+            <section id="thank-you">
+                <div class="container don3_flex-container">
+                    <div class="thank-you_text">
+                         <h2>
 
-        Thank you. Your donation helps support families in 
+          Thank you. Your donation helps support families in 
 
-      </h2>
-                </div>
-                <div class="thank-you_share">
-                    <div class="section-badge">
-                        <p>share</p>
+        </h2>
                     </div>
-                     <h2>"I just donated to 
+                    <div class="thank-you_share">
+                        <div class="section-badge">
+                            <p>share</p>
+                        </div>
+                         <h2>"I just donated to 
 
-          The Green Trees 
+            The Green Trees 
 
-          Initiative to help 
+            Initiative to help 
 
-          support families 
+            support families 
 
-          and fight climate 
+            and fight climate 
 
-          change. Join me?” 
+            change. Join me?” 
 
-      </h2>
-                    <ul>
-                        <li><a href=""><img src="./img/iconmonstr-twitter-1@2x.png" alt="">Twitter</a>
-                        </li>
-                        <li><a href=""><img src="./img/iconmonstr-facebook-1@2x.png" alt="">Facebook</a>
-                        </li>
-                        <li><a href=""><img src="./img/Path 85@2x.png" alt="">Email</a>
-                        </li>
-                        <li><a href=""><img src="./img/Path 87@2x.png" alt="">Text</a>
-                        </li>
-                    </ul>
+        </h2>
+                        <ul>
+                            <li><a href=""><img src="./img/iconmonstr-twitter-1@2x.png" alt="">Twitter</a>
+                            </li>
+                            <li><a href=""><img src="./img/iconmonstr-facebook-1@2x.png" alt="">Facebook</a>
+                            </li>
+                            <li><a href=""><img src="./img/Path 85@2x.png" alt="">Email</a>
+                            </li>
+                            <li><a href=""><img src="./img/Path 87@2x.png" alt="">Text</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section id="thanks-for-giving">
-            <div class="container flex-container_thanks">
-                <p>Thank you so much for giving. We’ve sent a receipt for your donation to
-                    <a
-                    href="">yourmail@emailaddress.com</a>. If you have any questions, please don’t
-                        hesitate to reach out to</p>
-                 <h2>We can Take action now to save the future</h2>
-            </div>
-        </section>
+            </section>
+            <section id="thanks-for-giving">
+                <div class="container flex-container_thanks">
+                    <p>Thank you so much for giving. We’ve sent a receipt for your donation to
+                        <a
+                        href="">yourmail@emailaddress.com</a>. If you have any questions, please don’t
+                            hesitate to reach out to</p>
+                     <h2>We can Take action now to save the future</h2>
+                </div>
+            </section>
+        </main>
         <footer>
             <div class="container grid-container_footer">
                 <div class="footer_logo">
@@ -155,7 +162,37 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
         <script>
             $(document).ready(function(){
+                //fitler category
+                $('.button').click(function(){
+                    var name = $(this).attr('data-filter');
+                    if(name == 'all'){
+                        $('.filter').show('2000');
+                    }
+                    else{
+                        $('.filter').not('.'+name).hide('2000');
+                        $('.filter').filter('.'+name).show('2000');
+                    }
+                });
+                $('#all-entries_filter button').click(function(){
+                    $(this).addClass('filter-active').siblings().removeClass('filter-active');
+                });
+                $('#all-entries_filter button#es').click(function(){
+                    var event = $('.all-entries_contents .events');
+                    event.css('grid-column', 'auto / span 2');
+                    event.css('grid-row', 'auto');
+                });
+                // checked radio button
+                // $('input:radio').click(function(){
+                //     $(this).parent().css('background-color', '#354463');
+                // })
             
+                // Enter custom donation - button
+                $('#custom-donation').click(function(){
+                    $("input:radio[name='donacioni']").each(function(i) {
+                    this.checked = false;
+                    });
+                })
+                
                 //tbt carousel (about)
                 $('#tbt-carousel').slick({
                     dots: false,

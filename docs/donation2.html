@@ -8,6 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="./img/icon.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
         <title>GREEN</title>
         <!-- <style>
 
@@ -17,14 +18,13 @@
     </head>
     
     <body>
-        <header class="donation_header">
+        <header class="donation_header animated slideInLeft fast">
             <div class="container header_flex-container">
-                <div id="logo_navigation">
-                     <h1 id="logo">The green <br>trees initiative</h1>
+                <div id="logo_navigation"> <a href="./index.html" id="logo">The green <br>trees initiative</a>
                 </div>
             </div>
         </header>
-        <main id="donation_two">
+        <main id="donation_two" class="animated fadeIn">
             <div class="container donation-two_flex-container">
                 <form action="">
                     <div class="form_grid-container">
@@ -116,7 +116,10 @@
                          <h3 class="clickthebtn">Click the button to confirm your donation of <span>$10</span><span>, recurring monthly</span></h3>
                     </div>
                     <div class="go-back_process-payment"> <a href="donation.html">Go back</a>
-                        <button type="submit" class="regular-btn">Process Payment</button>
+                        <button type="button" onclick="location.href = 'donation3.html';"
+                        class="regular-btn special-hover"> <span></span>
+                            <text>Process Payment</text>
+                        </button>
                     </div>
                 </form>
                 <div class="give-hope">
@@ -195,7 +198,37 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
         <script>
             $(document).ready(function(){
+                //fitler category
+                $('.button').click(function(){
+                    var name = $(this).attr('data-filter');
+                    if(name == 'all'){
+                        $('.filter').show('2000');
+                    }
+                    else{
+                        $('.filter').not('.'+name).hide('2000');
+                        $('.filter').filter('.'+name).show('2000');
+                    }
+                });
+                $('#all-entries_filter button').click(function(){
+                    $(this).addClass('filter-active').siblings().removeClass('filter-active');
+                });
+                $('#all-entries_filter button#es').click(function(){
+                    var event = $('.all-entries_contents .events');
+                    event.css('grid-column', 'auto / span 2');
+                    event.css('grid-row', 'auto');
+                });
+                // checked radio button
+                // $('input:radio').click(function(){
+                //     $(this).parent().css('background-color', '#354463');
+                // })
             
+                // Enter custom donation - button
+                $('#custom-donation').click(function(){
+                    $("input:radio[name='donacioni']").each(function(i) {
+                    this.checked = false;
+                    });
+                })
+                
                 //tbt carousel (about)
                 $('#tbt-carousel').slick({
                     dots: false,

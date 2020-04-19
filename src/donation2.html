@@ -6,20 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />    
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="./img/icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">    
     <title>GREEN</title>
     <!-- <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
     </style> -->
   </head>
 <body>
-    <header class="donation_header">
+    <header class="donation_header animated slideInLeft fast">
       <div class="container header_flex-container">
         <div id="logo_navigation">
-          <h1 id="logo">The green <br>trees initiative</h1>
+          <a href="./index.html" id="logo">The green <br>trees initiative</a>
         </div>
       </div>
     </header>
-    <main id="donation_two">
+    <main id="donation_two" class="animated fadeIn">
       <div class="container donation-two_flex-container">
         <form action="">
           <div class="form_grid-container">
@@ -79,7 +80,10 @@
           </div>
           <div class="go-back_process-payment">
             <a href="donation.html">Go back</a>
-            <button type="submit" class="regular-btn">Process Payment</button>
+            <button type="button" onclick="location.href = 'donation3.html';"  class="regular-btn special-hover">
+              <span></span>
+              <text>Process Payment</text>
+            </button>
           </div>
         </form>
         <div class="give-hope">

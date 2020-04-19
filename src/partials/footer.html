@@ -42,7 +42,37 @@
 
 
 $(document).ready(function(){
+    //fitler category
+    $('.button').click(function(){
+        var name = $(this).attr('data-filter');
+        if(name == 'all'){
+            $('.filter').show('2000');
+        }
+        else{
+            $('.filter').not('.'+name).hide('2000');
+            $('.filter').filter('.'+name).show('2000');
+        }
+    });
+    $('#all-entries_filter button').click(function(){
+        $(this).addClass('filter-active').siblings().removeClass('filter-active');
+    });
+    $('#all-entries_filter button#es').click(function(){
+        var event = $('.all-entries_contents .events');
+        event.css('grid-column', 'auto / span 2');
+        event.css('grid-row', 'auto');
+    });
+    // checked radio button
+    // $('input:radio').click(function(){
+    //     $(this).parent().css('background-color', '#354463');
+    // })
 
+    // Enter custom donation - button
+    $('#custom-donation').click(function(){
+        $("input:radio[name='donacioni']").each(function(i) {
+        this.checked = false;
+        });
+    })
+    
     //tbt carousel (about)
     $('#tbt-carousel').slick({
         dots: false,
