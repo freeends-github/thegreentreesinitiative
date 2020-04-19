@@ -1,14 +1,14 @@
 //Animated counter
 
-const counters = document.querySelectorAll('.counter');
-const speed = 200;
+let counters = document.querySelectorAll('.counter');
+let speed = 200;
 
-counters.forEach(counter => {
-  const updateCount = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
+counters.forEach(function(counter) {
+  let updateCount = function() {
+    let target = +counter.getAttribute('data-target');
+    let count = +counter.innerText;
 
-    const inc = target / speed;
+    let inc = target / speed;
 
     if(count < target) {
       counter.innerText =Math.ceil(count + inc);
@@ -23,23 +23,23 @@ counters.forEach(counter => {
 
 // Special hover
 
-const ELEMENTS = document.querySelectorAll(".special-hover");
-const ELEMENTS_SPAN = [];
+let ELEMENTS = document.querySelectorAll(".special-hover");
+let ELEMENTS_SPAN = [];
 
-ELEMENTS.forEach((element, index) => {
+ELEMENTS.forEach(function(element,index) {
 	let addAnimation = false;
 
 	if (!ELEMENTS_SPAN[index])
 		ELEMENTS_SPAN[index] = element.querySelector("span");
 
-	element.addEventListener("mouseover", e => {
+	element.addEventListener("mouseover", function(e) {
 		ELEMENTS_SPAN[index].style.left = e.pageX - element.offsetLeft + "px";
 		ELEMENTS_SPAN[index].style.top = e.pageY - element.offsetTop + "px";
 
 		if (addAnimation) element.classList.add(ANIMATEDCLASSNAME);
 	});
 
-	element.addEventListener("mouseout", e => {
+	element.addEventListener("mouseout", function(e) {
 		ELEMENTS_SPAN[index].style.left = e.pageX - element.offsetLeft + "px";
 		ELEMENTS_SPAN[index].style.top = e.pageY - element.offsetTop + "px";
 	});
@@ -47,8 +47,8 @@ ELEMENTS.forEach((element, index) => {
 
 // donation form
 
-// const humanity = document.querySelectorAll('.pay-per-humanity');
-// const inputRadio = document.querySelectorAll('.input_radio input');
+// let humanity = document.querySelectorAll('.pay-per-humanity');
+// let inputRadio = document.querySelectorAll('.input_radio input');
 
 // inputRadio.forEach(input => {
 //   if (input.length > 0) {
