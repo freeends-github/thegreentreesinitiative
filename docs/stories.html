@@ -104,7 +104,7 @@
                         </div>
                         <div class="story">
                             <div class="story-header">
-                                <div class="dick1">
+                                <div class="dick1" data-title="CLAUDINE, NIGERIA">
                                      <h2>Claudine, Nigeria</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec aliquet
                                         nunc, id consectetur lorem. Donec pretium est sed ornare bibendum. In tincidunt
@@ -117,7 +117,7 @@
                                         lectus metus nec dui. Nunc et ipsum aliquam, sodales mi eu, varius odio.
                                         Proin porta nulla nec ex blandit, nec ornare lorem ullamcorper.</p>
                                 </div>
-                                <div class="dick1">
+                                <div class="dick1" data-title="ZAINAB, NIGERIA">
                                      <h2>Claudine, Nigeria</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec aliquet
                                         nunc, id consectetur lorem. Donec pretium est sed ornare bibendum. In tincidunt
@@ -130,7 +130,7 @@
                                         lectus metus nec dui. Nunc et ipsum aliquam, sodales mi eu, varius odio.
                                         Proin porta nulla nec ex blandit, nec ornare lorem ullamcorper.</p>
                                 </div>
-                                <div class="dick1">
+                                <div class="dick1" data-title="CARITAS, RWANDA">
                                      <h2>Claudine, Nigeria</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec aliquet
                                         nunc, id consectetur lorem. Donec pretium est sed ornare bibendum. In tincidunt
@@ -143,7 +143,7 @@
                                         lectus metus nec dui. Nunc et ipsum aliquam, sodales mi eu, varius odio.
                                         Proin porta nulla nec ex blandit, nec ornare lorem ullamcorper.</p>
                                 </div>
-                                <div class="dick1">
+                                <div class="dick1" data-title="EUPHRASIE, RWANDA">
                                      <h2>Claudine, Nigeria</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec aliquet
                                         nunc, id consectetur lorem. Donec pretium est sed ornare bibendum. In tincidunt
@@ -156,7 +156,7 @@
                                         lectus metus nec dui. Nunc et ipsum aliquam, sodales mi eu, varius odio.
                                         Proin porta nulla nec ex blandit, nec ornare lorem ullamcorper.</p>
                                 </div>
-                                <div class="dick1">
+                                <div class="dick1" data-title="UNIS, SUDAN">
                                      <h2>Claudine, Nigeria</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec aliquet
                                         nunc, id consectetur lorem. Donec pretium est sed ornare bibendum. In tincidunt
@@ -169,7 +169,7 @@
                                         lectus metus nec dui. Nunc et ipsum aliquam, sodales mi eu, varius odio.
                                         Proin porta nulla nec ex blandit, nec ornare lorem ullamcorper.</p>
                                 </div>
-                                <div class="dick1">
+                                <div class="dick1" data-title="REGINA, SUDAN">
                                      <h2>Claudine, Nigeria</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec aliquet
                                         nunc, id consectetur lorem. Donec pretium est sed ornare bibendum. In tincidunt
@@ -302,7 +302,7 @@
                 // Enter custom donation - button
                 $('#custom-donation').click(function(){
                     $("input:radio[name='donacioni']").each(function(i) {
-                    this.checked = false;
+                        this.checked = false;
                     });
                 })
                 
@@ -332,12 +332,15 @@
                   asNavFor: '.img-of, .person-photo, .person-quotes',
                   dots: true,
                   appendDots: $('#slick--dots'),
+                  customPaging: function (slider, i) {
+            		// var title = $(slider.$slides[i]).data('title');
+            		return true;
+            	  },
                   nextArrow: $('.story .regular-btn'),
                   infinity: true,
                   touchMove: false,
                   accessibility: false,
                   draggable: false,
-            
                 });
                 $('.img-of').slick({
                     slidesToShow: 1,

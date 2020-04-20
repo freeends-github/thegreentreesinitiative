@@ -203,56 +203,68 @@ section#fact-modules{
 section#stories-preview{
   padding: 128px 0;
   background-color: #fff;
-  .stories-preview_grid-container{
-    display: grid;
-    grid-template-columns: 42.75fr 57.15fr;
-    .slider-dots{
-      margin: 43px 0 56px;
-    }
-      .sp_text-part{
-        display: flex;
-        flex-direction: column;
-        .sp_text{
-          padding: 52px 64px 62px 64px;
-          background-color: #354463;
-          color: #fff;
-          margin-bottom: 77px;
-          h3{
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 20px;
-          }
-          p{
-            font-size: 14px;
-            text-transform: uppercase;
-            font-weight: 300;
-          }
-        }
-        .regular-btn{
-          color: #354463;
-          background-color: #C1F7D5;
-          padding: 13px 32px 13px 32px;
-          border-radius: 100px;
-          font-size: 18px;
-          font-weight: 700;
-          line-height: 24px;
-        }
-      }
-      .sp_img{
-        background-image: url(../img/Claudine-Image1@2x.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        .section-badge{
-          display: inline-block;
-          top: 0;
-          left: 64px;
+  .container{
+    // text-align: right;
+    display: flex;
+    justify-content: flex-end;
+
+    .sp_img{
+      // background-image: url(../img/Claudine-Image1@2x.png);
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      position: relative;
+      padding: 43px 48px 0 48px;
+      width: 57.14%;
+      // float: right;
+      .section-badge{
+        display: inline-block;
+        top: 0;
+        left: 64px;
           position: absolute;
           transform: translateY(-50%);
         }
       }
   }
 }
+        // .sp_text-part{
+        //   position: absolute;
+        //   right: 100%;
+        //   display: flex;
+        //   flex-direction: column;
+        //   .slider-dots{
+        //     margin: 0;
+        //   }
+        //   .sp_text{
+        //     padding: 52px 64px 52px 64px;
+        //     background-color: #354463;
+        //     color: #fff;
+        //     margin-bottom: 64px;
+        //     margin-top: 56px;
+        //     // transform: translateX(64px);
+        //     // z-index: 2;
+        //     h3{
+        //       font-size: 28px;
+        //       font-weight: 700;
+        //       margin-bottom: 28px;
+        //     }
+        //     p{
+        //       font-size: 14px;
+        //       text-transform: uppercase;
+        //       font-weight: 300;
+        //       margin: 0;
+              
+        //     }
+        //   }
+        //   .regular-btn{
+        //     color: #354463;
+        //     background-color: #C1F7D5;
+        //     padding: 13px 32px 13px 32px;
+        //     border-radius: 100px;
+        //     font-size: 18px;
+        //     font-weight: 700;
+        //     line-height: 24px;
+        //   }
+        // }
 section#save_future{
   background-color: #354463;
   color: #fff;

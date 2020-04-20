@@ -195,64 +195,87 @@
                     </div>
                 </div>
             </section>
-            <section id="tbt">
-                <div class="container">
-                    <div class="tbt_text">
-                         <h2>TAKE A LOOK BACK AT</h2>
-                        <div class="arrow-desktop arrow-carousel_about">
-                            <img src="./img/arrow-right.png" alt="arrow">
-                        </div>
-                        <div style="clear: both;"></div>
-                    </div>
-                </div>
-                <div id="tbt-carousel">
-                    <div class="card">
-                        <img class="card-img-top" src="./img/tbt-img.png" alt="Card image cap">
-                        <div class="arrow-mobile arrow-carousel_about">
-                            <img src="./img/arrow-right.png" alt="arrow">
-                        </div>
-                        <div class="card-body">
-                             <h5 class="card-title">Training to rural women and community-based organizations </h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi felis,
-                                auctor vitae vestibulum vel, consequat eu dolor.</p> <a href="#" class="btn btn-primary">Read more</a>
-                            <div
-                            class="section-badge">
-                                <p>2018</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="./img/tbt-img.png" alt="Card image cap">
-                    <div class="arrow-mobile arrow-carousel_about">
-                        <img src="./img/arrow-right.png" alt="arrow">
-                    </div>
-                    <div class="card-body">
-                         <h5 class="card-title">Training to rural women and community-based organizations </h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi felis,
-                            auctor vitae vestibulum vel, consequat eu dolor.</p> <a href="#" class="btn btn-primary">Read more</a>
-                        <div
-                        class="section-badge">
-                            <p>2018</p>
-                    </div>
-                </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="./img/tbt-img.png" alt="Card image cap">
-                    <div class="arrow-mobile arrow-carousel_about">
-                        <img src="./img/arrow-right.png" alt="arrow">
-                    </div>
-                    <div class="card-body">
-                         <h5 class="card-title">Training to rural women and community-based organizations </h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi felis,
-                            auctor vitae vestibulum vel, consequat eu dolor.</p> <a href="#" class="btn btn-primary">Read more</a>
-                        <div
-                        class="section-badge">
-                            <p>2018</p>
-                    </div>
-                </div>
-                </div>
-                </div>
-            </section>
+            <!-- <section id="tbt">
+
+    <div class="container">
+
+      <div class="tbt_text">
+
+        <h2>TAKE A LOOK BACK AT</h2>
+
+        <div class="arrow-desktop arrow-carousel_about"><img src="./img/arrow-right.png" alt="arrow"></div>
+
+        <div style="clear: both;"></div>
+
+      </div>
+
+    </div>
+
+      <div id="tbt-carousel">
+
+        <div class="card">
+
+          <img class="card-img-top" src="./img/tbt-img.png" alt="Card image cap">
+
+          <div class="arrow-mobile arrow-carousel_about"><img src="./img/arrow-right.png" alt="arrow"></div>
+
+          <div class="card-body">
+
+            <h5 class="card-title">Training to rural women and community-based organizations </h5>
+
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi felis, auctor vitae vestibulum vel, consequat eu dolor.</p>
+
+            <a href="#" class="btn btn-primary">Read more</a>
+
+            <div class="section-badge"><p>2018</p></div>
+
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <img class="card-img-top" src="./img/tbt-img.png" alt="Card image cap">
+
+          <div class="arrow-mobile arrow-carousel_about"><img src="./img/arrow-right.png" alt="arrow"></div>
+
+          <div class="card-body">
+
+            <h5 class="card-title">Training to rural women and community-based organizations </h5>
+
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi felis, auctor vitae vestibulum vel, consequat eu dolor.</p>
+
+            <a href="#" class="btn btn-primary">Read more</a>
+
+            <div class="section-badge"><p>2018</p></div>
+
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <img class="card-img-top" src="./img/tbt-img.png" alt="Card image cap">
+
+          <div class="arrow-mobile arrow-carousel_about"><img src="./img/arrow-right.png" alt="arrow"></div>
+
+          <div class="card-body">
+
+            <h5 class="card-title">Training to rural women and community-based organizations </h5>
+
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi felis, auctor vitae vestibulum vel, consequat eu dolor.</p>
+
+            <a href="#" class="btn btn-primary">Read more</a>
+
+            <div class="section-badge"><p>2018</p></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+  </section> -->
             <section id="subscribe-module">
                 <div class="container subscribe_flex-container">
                     <div class="subscribe-text">
@@ -365,7 +388,7 @@
                 // Enter custom donation - button
                 $('#custom-donation').click(function(){
                     $("input:radio[name='donacioni']").each(function(i) {
-                    this.checked = false;
+                        this.checked = false;
                     });
                 })
                 
@@ -395,12 +418,15 @@
                   asNavFor: '.img-of, .person-photo, .person-quotes',
                   dots: true,
                   appendDots: $('#slick--dots'),
+                  customPaging: function (slider, i) {
+            		// var title = $(slider.$slides[i]).data('title');
+            		return true;
+            	  },
                   nextArrow: $('.story .regular-btn'),
                   infinity: true,
                   touchMove: false,
                   accessibility: false,
                   draggable: false,
-            
                 });
                 $('.img-of').slick({
                     slidesToShow: 1,

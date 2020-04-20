@@ -225,7 +225,7 @@
                 // Enter custom donation - button
                 $('#custom-donation').click(function(){
                     $("input:radio[name='donacioni']").each(function(i) {
-                    this.checked = false;
+                        this.checked = false;
                     });
                 })
                 
@@ -255,12 +255,15 @@
                   asNavFor: '.img-of, .person-photo, .person-quotes',
                   dots: true,
                   appendDots: $('#slick--dots'),
+                  customPaging: function (slider, i) {
+            		// var title = $(slider.$slides[i]).data('title');
+            		return true;
+            	  },
                   nextArrow: $('.story .regular-btn'),
                   infinity: true,
                   touchMove: false,
                   accessibility: false,
                   draggable: false,
-            
                 });
                 $('.img-of').slick({
                     slidesToShow: 1,
